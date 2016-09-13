@@ -1,5 +1,7 @@
 #application structure
 
+##All backend work is done in server.js, app, and config while all the frontend is handled in the public ##folder.
+
 - app
     ----- models/
     ---------- nerd.js <!-- the nerd model to handle CRUD -->
