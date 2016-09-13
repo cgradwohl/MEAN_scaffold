@@ -1,4 +1,5 @@
-'- app
+```
+- app
         ----- models/
         ---------- nerd.js <!-- the nerd model to handle CRUD -->
     ----- routes.js
@@ -22,4 +23,5 @@
     - .bowerrc <!-- tells bower where to put files (public/libs) -->
     - bower.json <!-- tells bower which files we need -->
     - package.json <!-- tells npm which packages we need -->
-    - server.js' <!-- set up our node application -->
+    - server.js <!-- set up our node application -->
+```    
