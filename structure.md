@@ -3,13 +3,13 @@
 ##All backend work is done in server.js, app, and config while all the frontend is handled in the public ##folder.
 
 - app
-    ----- models/
-    ---------- nerd.js <!-- the nerd model to handle CRUD -->
+----- models/
+---------- nerd.js <!-- the nerd model to handle CRUD -->
 ----- routes.js
 
 
 - config
-    ----- db.js
+----- db.js
 
 
 - node_modules <!-- created by npm install -->
