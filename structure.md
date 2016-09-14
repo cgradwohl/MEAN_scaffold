@@ -46,9 +46,9 @@ MEAN_scaffold
 ```
 
 
-~~~~~~~~~~~~~~~~~~~
-SETUP BACK END
-~~~~~~~~~~~~~~~~~~~
+
+###SETUP BACK END
+
 
 1.  All Node applications start with the package.json file
 To know current versions use:
@@ -96,9 +96,9 @@ This is where you can handle your API routes.For all other routes (*), we will s
 At this point the backend is done and we can start our server, **send a user the Angular app (index.html), and handle 1 API route to get all the nerds.
 
 
-~~~~~~~~~~~~~~~~~~~
-SETUP FRONT END
-~~~~~~~~~~~~~~~~~~~
+
+###SETUP FRONT END
+
 1.  Create an index VIEW file in the `public/view/` directory
 ```
 public/views/index.html
