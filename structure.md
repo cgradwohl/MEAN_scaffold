@@ -50,7 +50,7 @@ MEAN_scaffold
 ###SETUP BACK END
 
 
-1.  All Node applications start with the package.json file
+I.  All Node applications start with the package.json file
 To know current versions use:
 ```
 $ express -version
@@ -65,28 +65,28 @@ $ npm list method-override
 ```
 
 
-2.  We can install the dependencies we just included on `package.json` into the `/node_modules` directory
+II.  We can install the dependencies we just included on `package.json` into the `/node_modules` directory
 type from project directory:
 ```
 $ npm install
 ```
 
 
-3.  Now we can setup the `server.js` for our one page application.
+III.  Now we can setup the `server.js` for our one page application.
 
 
-4.  Setup the `/config/db.js` directory.
+IV.  Setup the `/config/db.js` directory.
 In the future, you may want to add more config files and call them in server.js. Now that this file is defined and we’ve called it in our server.js using 'var db = require('./config/db');`, you can call any items inside of it using db.url. For getting this to work, you’ll want a local MongoDB database installed or you can just grab a quick one off services like Modulus or Mongolab.
 
 
-5.  Create a quick Mongoose model so that we can define our Nerds(Objects) in our database.
+V.  Create a quick Mongoose model so that we can define our Nerds(Objects) in our database.
 ```
 app/models/nerd.js
 ```
 This is where we will use the Mongoose module and be able to define our Nerd model with a name attribute with data type String. If you want more fields, feel free to add them here. Read up on the Mongoose docs to see all the things you can define.
 
 
-6.  Last, move onto the routes and use the model we just created.
+VI.  Last, move onto the routes and use the model we just created.
 ```
 app/routes.js
 ```
