@@ -50,7 +50,19 @@ MEAN_scaffold
 ###SETUP BACK END
 
 
-I.  All Node applications start with the package.json file
+I.  All Node applications start with the package.json file (you could npm install each depedancy seperately but this is a nice way to do it).
+```
+{
+     "name": "starter-node-angular",
+     "main": "server.js",
+     "dependencies": {
+       "express" : "~4.5.1", // can also use "express" : "latest", for each dependancy
+       "mongoose" : "~3.8.0",
+       "body-parser" : "~1.4.2",
+       "method-override" : "~2.0.2"        
+     }
+}
+```
 To know current versions use:
 ```
 $ express -version
@@ -91,20 +103,64 @@ VI.  Last, move onto the routes and use the model we just created.
 app/routes.js
 ```
 IMPORTANT: Use the app folder to add more models, controllers, routes, and anything backend (Node) specific to your app.
-This is where you can handle your API routes.For all other routes (*), we will send the user to our frontend application where Angular can handle routing them from there.
+This is where you can handle your API routes.For all other routes (*), we will send the user to our frontend application where Angular can handle routing them from there. Our Node backend will send any user that visits our application to our index.html file since we’ve defined that in our catch-all route (app.get('*')).
 
 At this point the backend is done and we can start our server, **send a user the Angular app (index.html), and handle 1 API route to get all the nerds.
 
 
 
-###SETUP FRONT END
+###SETUP/TEST FRONT END
 
-1.  Create an index VIEW file in the `public/view/` directory
+I.  Create an index VIEW file in the `public/view/` directory
 ```
 public/views/index.html
 ```
 
-2.  Test the server:
+II.  Test the server:
 ```
 $ node server.js
 ```
+
+###ADD FRONT END DEPENDANCIES WITH BOWER
+
+I.  create `.bowerrc` file which tells bower where to install the front end dependancies.
+```
+{
+    "directory": "public/libs"
+}
+```
+II. create the `bower.json` file which specifies which front end dependancies to install.
+```
+{
+    "name": "starter-node-angular",
+    "version": "1.0.0",
+    "dependencies": {
+        "bootstrap": "latest",
+        "font-awesome": "latest",
+        "animate.css": "latest",
+        "angular": "latest",
+        "angular-route": "latest"   
+    }
+}
+```
+
+III.  Run `$ bower install` bower will install all dependancies into the directory specified by the .bowerrc file.
+
+###SETUP ANGULAR.js APPLICATION
+
+I.  All of our controllers, services, routes for our Angular application will be in our `public/js` directory:
+```
+- public
+----- js
+---------- controllers
+-------------------- MainCtrl.js
+-------------------- NerdCtrl.js
+---------- services
+-------------------- NerdService.js
+---------- app.js
+---------- appRoutes.js
+```
+We will combine all controllers, services, routes and inject these modules into our main app.js.
+app.js is where everything comes together!
+
+II.      
