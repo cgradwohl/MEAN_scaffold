@@ -163,4 +163,11 @@ I.  All of our controllers, services, routes for our Angular application will be
 We will combine all controllers, services, routes and inject these modules into our main app.js.
 app.js is where everything comes together!
 
-II.      
+II. Now its time to setup our angular services. This is where you would use $http or $resource to do your API calls to the Node backend from your Angular frontend.  
+`public/js/services/NerdService.js`
+
+III.  Next lets define some Angular routes in `public/js/appRoutes.js` Our Angular frontend will use the template file and inject it into the <div ng-view></div> in our index.html file. It will do this without a page refresh which is exactly what we want for a single page application.
+
+IV. Now we need to create the view files and then the smaller template files (home.html, nerd.html, and geek.html) will be injected into our index.html file inside of the <div ng-view></div>. This happens in our `public/index.html`
+
+V. We have defined our resources, controllers, services, and routes and included the files in our index.html. Now let’s make them all work together. We will use dependency injection and set up our Angular application. `public/js/app.js`
